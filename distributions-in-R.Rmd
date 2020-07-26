@@ -640,4 +640,4 @@ df %>%
 
 Now that you've had some opportunity to get acquainted with distributions and with some tools for summarizing and visualizing them in `R`, it's time to try some stuff out yourself.
 
-You can download the .Rmd file that contains the problem set for this lesson from [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.Rmd). You can see the questions in pdf format [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.pdf).
+You can download the .Rmd file that contains the problem set for this lesson from [here](http://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.Rmd). You can see the questions in pdf format [here](http://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.pdf). *Note*: For both links, right click to and select open in new tab.
