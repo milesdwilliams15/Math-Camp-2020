@@ -460,4 +460,4 @@ Before we wrap things up, I hasten to point out one important caveat about integ
 
 ## Problem Sets
 
-Now it's your turn to play around with integrals. You can find the problem sets for this lesson here. 
+Now it's your turn to play around with integrals. You can find the problem sets for this lesson [\color{blue}here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/integrals-problems.pdf). 
