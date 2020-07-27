@@ -2,8 +2,12 @@
 title: "Exploring Distributions in R"
 author: "Miles D. Williams"
 subtitle: "UIUC Math Camp 2020"
-output: html_document
+output: pdf_document
 fontsize: 12pt
+fontfamily: mathpazo
+header-includes:
+  - \usepackage{setspace}
+  - \onehalfspacing
 ---
 
 ```{r setup, include=FALSE}
@@ -640,4 +644,4 @@ df %>%
 
 Now that you've had some opportunity to get acquainted with distributions and with some tools for summarizing and visualizing them in `R`, it's time to try some stuff out yourself.
 
-You can download the .Rmd file that contains the problem set for this lesson from [here](http://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.Rmd). You can see the questions in pdf format [here](http://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.pdf). *Note*: For both links, right click to and select open in new tab.
+You can download the .Rmd file that contains the problem set for this lesson from [\color{blue}{here}](http://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.Rmd). You can see the questions in pdf format [\color{blue}{here}](http://github.com/milesdwilliams15/Math-Camp-2020/blob/master/distributions-in-R-problems.pdf). 
