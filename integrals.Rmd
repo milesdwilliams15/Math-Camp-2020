@@ -450,13 +450,15 @@ Using this approach, the area under the curve is approximated as
 $$\text{Area} \approx \sum_{i = 1}^{|\Delta x'|} \Delta x'_i = \sum_{i = 1}^{|x'|} 2 + 2x_i' - \frac{3 x_i'^2}{20}.$$
 I won't make you suffer through the process of calculating each $\Delta x_i'$ and then summing them up. Instead, I'll just tell you that the answer is $74.25$. This solution is *relatively* close to the correct answer, which is $70$. 
 
-But still, using this approach we're overestimating the true area under the curve by $4.25$---that's not ideal. This approach is also considerably more computationally intensive. The solution with integration not only provides the correct answer, it's also just more elegant.
+But still, using this approach we're overestimating the true area under the curve by $4.25$---that's not ideal. 
+
+This approach is also considerably more computationally intensive---would you rather calculate 11 different values of $\Delta x'$ and then add all these up, or would you prefer to calculate just two values and subtract one from the other? The solution with integration not only provides the correct answer, it's also just more elegant. 
 
 *That makes integration incredibly appealing*---hopefully you can see that now, too.
 
 ## When you *can't* integrate
 
-Before we wrap things up, I hasten to point out one important caveat about integrals: the function to be integrated must be a *continuous* function. There *cannot* be any kind of break, or jump, or vertical asymtote.
+Before we wrap things up, I hasten to point out one important caveat about integrals: the function to be integrated must be a *continuous* function. There *cannot* be any kind of break, or jump, or vertical asymptote.
 
 ## Problem Sets
 
