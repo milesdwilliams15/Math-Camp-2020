@@ -31,18 +31,17 @@ Let's get started!
 ```{r}
 # libraries
 library(tidyverse) # for grammar
-library(ggridges)  # for plotting pretty distributions
-library(foreach)   # for running loops
+library(ggridges)  # I like the plotting theme for ggridges
 ```
 
 
 
 ### What is a probability distribution?
 
-A *probability distribution* or *density* is a mathematical function that describes the probability of observing an occurrence of some outcome. As you learned in the session on *sets, intervals, and functions*, a function is a mapping between some $n$-dimensional input and some $n$-dimension output. A probability function is a particular type of function that takes as input some real valued number or integer, and returns a value between 0 and 1. Formally, a probability distribution is a function such that
+A *probability distribution* or *density* is a mathematical function that describes the probability of observing an occurrence of some outcome. As you learned in the session on *sets, intervals, and functions*, a function is a mapping between some $n$-dimensional input and some $n$-dimensional output. A probability function is a particular type of function that takes as input some real valued number or integer, and returns a value between 0 and 1. Formally, a probability distribution is a function such that
 $$f: \mathbb{R}^n \to [0,1].$$
 
-As an example, say we have the function $f : x \to y$ where $x \in \mathbb{R}$ and $y \in (0,1]$. In words, $f$ is a function that takes as input any value $x$ which lives in the domain of real numbers, and maps this to a value $y$ that lives in the domain of real numbers between 0 and 1, with 0 non-inclusive. Such a function could look like this
+As an example, say we have the function $f : x \to y$ where $x \in \mathbb{R}$ and $y \in (0,1]$. In words, $f$ is a function that takes as input any value $x$ which lives in the domain of real numbers, and maps this to a value $y$ that lives in the domain of real numbers between 0 and 1, with 0 non-inclusive.\footnote{The "0 non-inclusive" part here isn't strictly a requirement for a probability function---it's just a feature of the particular function I've specified here.} Such a function could look like this
 $$y = f(x) = \frac{1}{1 + x^2}.$$
 
 Now, say we have a *vector* of $x$ values where $x = \{-2.5,-2.4,-2.3,...,n-0.1,n,n+0.1,...,2.3, 2.4, 2.5 \}$. We can use our function $f$ to map these $x$ values to corresponding $y$ values on an x-y plot:
@@ -263,7 +262,7 @@ While this equation is a good approximation of $x$'s distribution, it is not goi
 To demonstrate this point, let's simulate some empirical data in `R`. Say we have a random variable $x$ where $x \sim \mathcal{N}(\mu = 0, \sigma = 1)$---this notation simply means that we're simulating random draws from a normal distribution with mean of 0 and standard deviation of 1. We simulate this in `R` as follows:
 
 ```{r}
-set.seed(111)
+set.seed(111) # setting the seed ensures I get the same output each time
 x = rnorm(
   n = 100,
   mean = 0,
@@ -408,7 +407,7 @@ x = seq(from=-5,to=5,by=0.01)
 # 2. Get vector 'y' which is the corresponding probabilities 
 #    for values in 'x'. These are returned by a call to `dnorm`
 
-y = dnorm(x=x) # use defauls for mean and s.d.
+y = dnorm(x=x) # use defaults for mean and s.d.
 
 # 3. Plot y over values of x.
 
@@ -433,7 +432,7 @@ ggplot(data=NULL) + # make empty plot (data=NULL by default)
     y = 'probabilities',
     title = 'Plotting a Normal Distribution'
   ) + 
-  theme_ridges(
+  theme_ridges(     # use the ridges theme from the ggridges package
     center_axis_labels = T
   )
 ```
@@ -449,7 +448,7 @@ x = seq(from=-5,to=5,by=0.01)
 # 2. Get vector 'y' which is the corresponding probabilities 
 #    for values in 'x'. These are returned by a call to `pnorm`
 
-y = pnorm(x) # use defauls for mean and s.d.
+y = pnorm(x) # use defaults for mean and s.d.
 
 # 3. Plot y over values of x.
 
@@ -488,7 +487,7 @@ x = seq(from=0,to=1,by=0.01)
 # 2. Get vector 'y' which is the corresponding quantiles
 #    for values in 'x'. These are returned by a call to `qnorm`
 
-y = qnorm(x) # use defauls for mean and s.d.
+y = qnorm(x) # use defaults for mean and s.d.
 
 # 3. Plot y over values of x.
 
@@ -523,7 +522,7 @@ Finally, we can use `rnorm` to simulate empirical values from a normal distribut
 ```{r}
 # 1. Get vector of random draws from a normal distribution.
 
-x = rnorm(n=100) # use defauls for mean and s.d., and n = 100
+x = rnorm(n=100) # use defaults for mean and s.d., and n = 100
 
 # 2. Plot a histogram of `x`
 

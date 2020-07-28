@@ -31,7 +31,7 @@ Fortunately, `R` is a functional programming language. *That means you can creat
 
 Knowing this, you tell your colleague that they can make their own version of `dnorm`. They can then compare the output from their custom function to that provided by `dnorm` to learn whether the base `R` function is trustworthy.
 
-As it turns out, they've already started working on such a function. Moreover, the function is returning results that don't equal what `dnorm` is returning. *That shouldn't be!* Can you help them figure out where they've gone wrong?
+As it turns out, they've already started working on such a function. However, the function is returning results that don't equal what `dnorm` is returning. *That shouldn't be!* Can you help them figure out where they've gone wrong?
 
 Here's what they have:
 
@@ -66,7 +66,9 @@ The Binomial distribution analogues for the `dnorm`, `pnorm`, etc. functions in 
 
 You can learn more about these functions by typing `?dbinom` into your console.
 
-Using these functions, can you plot the p.m.f., c.d.f., and empirical distribution for a binomial distribution with 5 trials where the probability of success is 0.25? This would be like a scenario where you have a "trick" coin where the likelihood of Heads, rather than being $50\%$, is $25\%$, and you want to know the probability of getting a certain number of heads after 5 tosses.
+Using these functions, can you plot the p.m.f., c.d.f., and empirical distribution for a binomial distribution with 5 trials where the probability of success is 0.25? 
+
+This would be like a scenario where you have a "trick" coin where the likelihood of Heads, rather than being $50\%$, is $25\%$, and you want to know the probability of getting a certain number of heads after 5 tosses.
 
 As a quick example, this is how to get the p.m.f. for a Binomial distribution with 2 trials and probability of success equal to 0.6:
 
@@ -80,9 +82,13 @@ dbinom(x = 0:n.trials, size = n.trials, prob = 0.6)
 
 You will almost always work with *conditional* probabilities or conditional *means*---or a conditional *something*---in your research. 
 
+The function for the normal distribution is an example of a conditional probability function:
+$$f(x | \mu, \sigma) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left( -\frac{(x - \mu)^2}{2\sigma^2} \right).$$
+The "$|$" in $f(\cdot)$ signifies that the function is evaluated at $x$ *given* $\mu$ and $\sigma$. That is, the mean and standard deviation of a random variable *condition* the probability of observing a given value of $x$.
+
 Say you have a friend who wants to learn some intuition behind conditional probabilities. 
 
-You decide to use the example of the conditional probability of pulling out up to 10 red jelly beans in 10 draws *without replacement* from a bowl of 100 total blue and red jelly beans, and you provide the following code to demonstrate the idea more intuitively:
+You decide to use the example of the conditional probability of pulling out up to 10 red jelly beans in 10 draws *without replacement* from a bowl of 100 total blue and red jelly beans. You provide the following code to demonstrate the idea more intuitively:
 
 ```{r}
 # jelly beans
@@ -120,7 +126,7 @@ table(out1)
 table(out2)
 ```
 
-You tell your friend that `table(out1)` returns a summary of the number of times you get $x$ many reds in 10 draws from the bowl when there are 20 reds total in the bowl. Meanwhile, `table(out2)` returns a summary of the number of times you get $x$ many reds in 10 draws from the bowl when there are 80 total red jelly beans. "As you can see," you tell them, "a bigger $N$ leads to a greater likelihood that you'll get up to 10 red jelly beans in 10 draws from the bowl." You continue, "this is what we mean by 'conditional' probability---the probability of pulling out $x$ reds from the bowl is conditioned by the total number of reds in the bowl.
+You tell your friend that `table(out1)` returns a summary of the number of times you get $x$ many reds in 10 draws from the bowl when there are 20 reds total in the bowl. Meanwhile, `table(out2)` returns a summary of the number of times you get $x$ many reds in 10 draws from the bowl when there are 80 total red jelly beans. "As you can see," you tell them, "a bigger $N$ of reds leads to a greater likelihood that you'll get up to 10 red jelly beans in 10 draws from the bowl." You continue, "this is what we mean by 'conditional' probability---the probability of pulling out $x$ reds from the bowl is conditioned by the total number of reds in the bowl.
 
 ***Part (A)***
 
@@ -142,4 +148,4 @@ Finally, your friend says, "One more Question. I promise!"
 
 "What happens if we put each bean we draw from the bowl back in before we draw again?"
 
-Change the code to answer their question...and hope they don't have any more!
+Change the code to answer their question.
