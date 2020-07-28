@@ -372,7 +372,7 @@ ggplot() +
 
 To find the area of this rectangle (the area under the curve of $f(x)$), we can just take the definite integral of $f(x)$.
 
-Using the power rule, we know that the indefinite integral of $f(x)$ is
+Since 2 is a constant, that means the integral must be $2x + C$ (we know this because the derivative of $2x + C$ is $2$):
 $$\int f(x) dx = \int 2 dx = 2x + C.$$
 When then have the following definite integral
 $$\int_0^3 2 dx = \left[2x \right]_0^3 = 2\cdot3 - 2\cdot 0,$$
