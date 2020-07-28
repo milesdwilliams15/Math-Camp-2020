@@ -5,7 +5,7 @@ This repository contains resources for UIUC political science grad students taki
 ## Integrals
 
  - Download the pdf file on integrals [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/integrals.pdf).
- - The source code for the less can be found [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/integrals.Rmd).
+ - The source code for the file can be found [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/integrals.Rmd).
  - The problem set in pdf form can be accessed [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/integrals-problems.pdf), and the source code can be found [here](https://github.com/milesdwilliams15/Math-Camp-2020/blob/master/integrals-problems.Rmd).
 
 ## Distributions
