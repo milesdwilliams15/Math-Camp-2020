@@ -32,7 +32,7 @@ What will be your net ROI between when you invested and week 15?
 Hint for **Part (A)**: your answer should have been *negative*. What does a negative value returned by the definite integral of $k(t)$ imply? Are we calculating the area *below* the curve of $k(t)$, or *above*? 
 
 
-## Problem 2. A unique fact about circles.
+### Problem 2. A unique fact about circles.
 
 If you've taken a class on geometry, you're probably familiar with the equation for the circumference of a circle:
 $$C = \pi d = 2\pi r,$$
