@@ -175,7 +175,7 @@ tibble(
   )
 ```
 
-While $k(t)$ tells us how quickly ROI changes at a given point in time, its integral tells us cumulatively how much money we'll have made by a given point in time---or in this case, *how much money we'd use*.
+While $k(t)$ tells us how quickly ROI changes at a given point in time, its integral tells us cumulatively how much money we'll have made by a given point in time---or in this case, *how much money we'd lose*.
 
 ## Notation
 
